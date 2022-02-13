@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c9b81a082ffb8f349966d4d8b37dd447
+  m_SerializeEntries:
+  - m_GUID: ed90c7173238a0e44aff07259b0fb600
+    m_Address: Player
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 6414664948396918975, guid: ed90c7173238a0e44aff07259b0fb600, type: 3}
+    m_TargetAsset: {fileID: 6414664948396918975, guid: ed90c7173238a0e44aff07259b0fb600, type: 3}
+  - m_GUID: cb842b2ce833275479e35ce474336446
+    m_Address: Bullet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 505478027330291255, guid: cb842b2ce833275479e35ce474336446, type: 3}
+    m_TargetAsset: {fileID: 505478027330291255, guid: cb842b2ce833275479e35ce474336446, type: 3}
+  - m_GUID: 1d1b87fab75e254449e140d8f5b1113e
+    m_Address: Asteroid
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 3776611525685549244, guid: 1d1b87fab75e254449e140d8f5b1113e, type: 3}
+    m_TargetAsset: {fileID: 3776611525685549244, guid: 1d1b87fab75e254449e140d8f5b1113e, type: 3}
+  - m_GUID: e5be061d3b2089046a8a55d5466b0099
+    m_Address: spaceship.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: e5be061d3b2089046a8a55d5466b0099, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: e5be061d3b2089046a8a55d5466b0099, type: 3}
+  - m_GUID: 1bd6c74c058d5f143a391104c445e845
+    m_Address: asteroids.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2800000, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
+    m_TargetAsset: {fileID: 2800000, guid: 1bd6c74c058d5f143a391104c445e845, type: 3}
+  - m_GUID: 5766d423b54e73848afbe498f9c9226c
+    m_Address: HpBar
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 855256584238860259, guid: 5766d423b54e73848afbe498f9c9226c, type: 3}
+    m_TargetAsset: {fileID: 855256584238860259, guid: 5766d423b54e73848afbe498f9c9226c, type: 3}
+  - m_GUID: 1f36eeeefc6c20e48aba05b7a9d64823
+    m_Address: UiRoot
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 8015138939369878347, guid: 1f36eeeefc6c20e48aba05b7a9d64823, type: 3}
+    m_TargetAsset: {fileID: 8015138939369878347, guid: 1f36eeeefc6c20e48aba05b7a9d64823, type: 3}
+  - m_GUID: 8b0b42e107710634281ecc3f500ec36d
+    m_Address: Hud
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 2129711313133613171, guid: 8b0b42e107710634281ecc3f500ec36d, type: 3}
+    m_TargetAsset: {fileID: 2129711313133613171, guid: 8b0b42e107710634281ecc3f500ec36d, type: 3}
+  - m_GUID: 7588c427b900656479d04d42439a9de4
+    m_Address: GameOverOverlay
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 3120984109542889462, guid: 7588c427b900656479d04d42439a9de4, type: 3}
+    m_TargetAsset: {fileID: 3120984109542889462, guid: 7588c427b900656479d04d42439a9de4, type: 3}
+  - m_GUID: 5243ae4a589748d42bb8f31a73983db7
+    m_Address: TitleLevel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 474415616984545670, guid: 5243ae4a589748d42bb8f31a73983db7, type: 3}
+    m_TargetAsset: {fileID: 474415616984545670, guid: 5243ae4a589748d42bb8f31a73983db7, type: 3}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 010889bb43c24f047951d312fdbb5392, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 9ae3a0103eba96e4f9d52f1f212a1d9f, type: 2}
+    - {fileID: 11400000, guid: 544e1148121456b40b6a97e2a83d7e33, type: 2}

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace CodeBase.Infrastructure
 {
-  public class SceneLoader
+  public class SceneLoader : ISceneLoader
   {
     private readonly ICoroutineRunner _coroutineRunner;
 

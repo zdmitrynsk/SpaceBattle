@@ -1,11 +1,13 @@
 using System.Collections;
+using System.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure
+namespace CodeBase.Logic
 {
-  public class LoadingCurtain : MonoBehaviour
+  public class LoadingCurtain : MonoBehaviour, ILoadingCurtain
   {
-    public CanvasGroup Curtain;
+    [SerializeField] private CanvasGroup curtain;
     
     private void Awake()
     {
@@ -15,16 +17,18 @@ namespace CodeBase.Infrastructure
     public void Show()
     {
       gameObject.SetActive(true);
-      Curtain.alpha = 1;
+      curtain.alpha = 1;
     }
-    
-    public void Hide() => StartCoroutine(DoFadeIn());
+
+    public async Task Hide() =>
+      await curtain.DOFade(0, 1).AsyncWaitForCompletion();
+      //StartCoroutine(DoFadeIn());
     
     private IEnumerator DoFadeIn()
     {
-      while (Curtain.alpha > 0)
+      while (curtain.alpha > 0)
       {
-        Curtain.alpha -= 0.03f;
+        curtain.alpha -= 0.03f;
         yield return new WaitForSeconds(0.03f);
       }
       
