@@ -5,9 +5,9 @@
     void Enter(TPayload payload);
   }
 
-  public interface IPayloadedState<in TPayloadd, TPayload2> : IExitableState 
-    where TPayloadd : class, IPayloadedState<TPayload2>
+  public interface IPayloadedState<in TPayloadState, TPayload2> : IExitableState 
+    where TPayloadState : class, IPayloadedState<TPayload2>
   {
-    void Enter<TPayload>(TPayload2 payload) where TPayload : class, TPayloadd;
+    void Enter<TPayloadMethod>(TPayload2 payload) where TPayloadMethod : class, TPayloadState;
   }
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CodeBase.Components.Observers
 {
-  public class ObserverDestroy : MonoBehaviour
+  public class DestroyObserver : MonoBehaviour
   {
     public event Action<GameObject> OnHappened;
 

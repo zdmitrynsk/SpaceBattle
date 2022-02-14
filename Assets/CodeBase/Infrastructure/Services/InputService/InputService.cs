@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.PlayerLoop;
 
 namespace CodeBase.Infrastructure.Services.InputService
 {
@@ -12,6 +14,7 @@ namespace CodeBase.Infrastructure.Services.InputService
     private InputAction _moveAction;
     private InputAction _fireAction;
 
+
     public Vector2 MoveVector => 
       _moveAction.ReadValue<Vector2>();
 
@@ -23,11 +26,6 @@ namespace CodeBase.Infrastructure.Services.InputService
       _fireAction = input.actions["fire"];
       _moveAction = input.actions["move"];
       DontDestroyOnLoad(this);
-    }
-
-    private void Update()
-    {
-      
     }
   }
 }

@@ -3,24 +3,24 @@ using UnityEngine;
 
 namespace CodeBase.Components.Damage
 {
-  [RequireComponent(typeof(ObserverTrigger))]
+  [RequireComponent(typeof(TriggerObserver))]
   public class Damage : MonoBehaviour
   {
-    [SerializeField] private ObserverTrigger observerTrigger;
+    [SerializeField] private TriggerObserver triggerObserver;
     
     public float Amount;
 
     private void Awake()
     {
-      observerTrigger.TriggerEnter += TriggerEnter;
+      triggerObserver.TriggerEnter += Enter;
     }
 
     private void OnDestroy()
     {
-      observerTrigger.TriggerEnter -= TriggerEnter;
+      triggerObserver.TriggerEnter -= Enter;
     }
 
-    private void TriggerEnter(Collider2D obj) => 
+    private void Enter(Collider2D obj) => 
       obj.GetComponent<Health>()?.TakeDamage(Amount);
   }
 }

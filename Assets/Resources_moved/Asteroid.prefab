@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 12
   _movementSpeedVector: {x: -5, y: 0}
+  rigidbody2D: {fileID: 2758754739626143788}
 --- !u!114 &4407335257519422682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +346,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7328134568941665686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,19 +364,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8128275354993313687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5136486322228948278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b082f3989dd762245846236ee6b6ba40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 4958117125959905905}
 --- !u!1001 &5518611915980729045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -486,3 +475,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7131578877124153791, guid: 5766d423b54e73848afbe498f9c9226c, type: 3}
   m_PrefabInstance: {fileID: 5518611915980729045}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8128275354993313687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5136486322228948278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b082f3989dd762245846236ee6b6ba40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 4958117125959905905}

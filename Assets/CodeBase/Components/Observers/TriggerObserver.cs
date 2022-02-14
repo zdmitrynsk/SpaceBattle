@@ -4,7 +4,7 @@ using UnityEngine;
 namespace CodeBase.Components.Observers
 {
   [RequireComponent(typeof(Collider2D))]
-  public class ObserverTrigger : MonoBehaviour
+  public class TriggerObserver : MonoBehaviour
   {
     public event Action<Collider2D> TriggerEnter;
     public event Action<Collider2D> TriggerExit;

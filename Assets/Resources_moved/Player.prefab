@@ -82,6 +82,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4600537250628496398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1744952395208970944}
   - component: {fileID: 5936107689952078896}
+  - component: {fileID: 9039964830707674861}
   - component: {fileID: 2946628409674258983}
   - component: {fileID: 2973252790450922736}
   - component: {fileID: 1877052104583328530}
@@ -195,6 +197,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &9039964830707674861
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6414664948396918975}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &2946628409674258983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -248,6 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotateSpeed: 150
+  rigidbody2D: {fileID: 9039964830707674861}
 --- !u!114 &1810840488045633180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 5
   _movementSpeedVector: {x: 0, y: 0}
+  rigidbody2D: {fileID: 9039964830707674861}
 --- !u!114 &-4260359992906410939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,19 +406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45d53852e4b74a4e8f19b83ca142dd6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4896847821408846797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7211153339691428515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b082f3989dd762245846236ee6b6ba40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parent: {fileID: 1744952395208970944}
 --- !u!1001 &8056186110192315712
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -513,3 +525,16 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7131578877124153791, guid: 5766d423b54e73848afbe498f9c9226c, type: 3}
   m_PrefabInstance: {fileID: 8056186110192315712}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4896847821408846797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7211153339691428515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b082f3989dd762245846236ee6b6ba40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 1744952395208970944}

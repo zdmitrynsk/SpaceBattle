@@ -62,8 +62,8 @@ MonoBehaviour:
       - m_Target: {fileID: 5347273952510314874}
         m_TargetAssemblyTypeName: CodeBase.Infrastructure.Services.InputService.InputService,
           Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 1
+        m_MethodName: OnInputMoveLeft
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -124,7 +124,7 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: a04ebf6a-41ed-49c3-bb97-b0353c6153c9
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &5347273952510314874

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeBase.Components
+namespace CodeBase.Components.Damage
 {
   [RequireComponent(typeof(Health))]
   public class FxOnDamage : MonoBehaviour

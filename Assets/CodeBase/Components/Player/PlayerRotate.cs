@@ -7,6 +7,7 @@ namespace CodeBase.Components.Player
   public class PlayerRotate : MonoBehaviour
   {
     [SerializeField] private float rotateSpeed = 150;
+    [SerializeField] private Rigidbody2D rigidbody2D;
     private IInputService _inputService;
 
     [Inject]
@@ -25,10 +26,10 @@ namespace CodeBase.Components.Player
       InputAxisX() != 0;
 
     private void RotateZByFrameAngle() => 
-      transform.Rotate(0,0, RotatingAngel());
+      rigidbody2D.MoveRotation(RotatingAngel());
 
     private float RotatingAngel() => 
-      -Mathf.Sign(InputAxisX())  * rotateSpeed * Time.fixedDeltaTime;
+      transform.rotation.eulerAngles.z - Mathf.Sign(InputAxisX()) * rotateSpeed * Time.fixedDeltaTime;
 
     private float InputAxisX() => 
       _inputService.MoveVector.x;

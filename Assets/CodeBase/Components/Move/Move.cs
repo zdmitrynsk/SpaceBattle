@@ -6,6 +6,7 @@ namespace CodeBase.Components.Move
   {
     [SerializeField] private float maxSpeed = float.MaxValue;
     [SerializeField] private Vector2 _movementSpeedVector = Vector2.zero;
+    [SerializeField] private Rigidbody2D rigidbody2D;
 
     public Vector2 MovementSpeedVector
     {
@@ -39,7 +40,7 @@ namespace CodeBase.Components.Move
     private void MoveByFrameDistance()
     {
       Vector3 distance = MovementSpeedVector * Time.fixedDeltaTime;
-      gameObject.transform.position += distance;
+      rigidbody2D.MovePosition(transform.position += distance);
     }
 
     private static float DownToZero(float baseValue, float downValue)

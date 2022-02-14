@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeBase
+namespace CodeBase.Components.Death
 {
   public class FxOnDeath : MonoBehaviour
   {

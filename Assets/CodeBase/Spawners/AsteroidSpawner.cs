@@ -82,7 +82,7 @@ namespace CodeBase.Spawners
     {
       GameObject asteroid = await _gameFactory.CreateAsteroid();
       asteroid.transform.position = RandomRightPosition();
-      asteroid.GetComponent<ObserverDestroy>().OnHappened += OnDestroyAsteroid;
+      asteroid.GetComponent<DestroyObserver>().OnHappened += OnDestroyAsteroid;
       Health health = asteroid.GetComponent<Health>();
       health.Max = _healthAsteroid;
       health.Current = health.Max;
@@ -101,7 +101,7 @@ namespace CodeBase.Spawners
 
     private void OnDestroyAsteroid(GameObject asteroid)
     {
-      asteroid.GetComponent<ObserverDestroy>().OnHappened -= OnDestroyAsteroid;
+      asteroid.GetComponent<DestroyObserver>().OnHappened -= OnDestroyAsteroid;
       _asteroids.Remove(asteroid);
     }
   }
