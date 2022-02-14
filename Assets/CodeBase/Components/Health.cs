@@ -7,7 +7,7 @@ namespace CodeBase.Components
   {
     [SerializeField] private float _current;
     [SerializeField] private float _max;
-    public event Action Changed;
+    public event Action<MonoBehaviour> Changed;
 
     public float Current
     {
@@ -21,10 +21,10 @@ namespace CodeBase.Components
       set => _max = value;
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(MonoBehaviour healthChanger, float damage)
     {
       Current -= damage;
-      Changed?.Invoke();
+      Changed?.Invoke(healthChanger);
     }
   }
 }

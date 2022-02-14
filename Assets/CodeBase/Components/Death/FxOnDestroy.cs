@@ -2,7 +2,7 @@
 
 namespace CodeBase.Components.Death
 {
-  public class FxOnDeath : MonoBehaviour
+  public class FxOnDestroy : MonoBehaviour
   {
     [SerializeField] private GameObject deathFx;
     

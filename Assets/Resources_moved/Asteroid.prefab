@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 8238325789118323615}
   - component: {fileID: 4776935978376303355}
   - component: {fileID: 4407335257519422682}
-  - component: {fileID: 7816515352623405586}
-  - component: {fileID: -8034291129701153072}
-  - component: {fileID: -4250646390925259544}
-  - component: {fileID: 951293698874155785}
+  - component: {fileID: 4757602731999468943}
+  - component: {fileID: 1393410620641002401}
+  - component: {fileID: 4669230964071163810}
   - component: {fileID: 4859847714458848396}
   - component: {fileID: 161558867706467139}
   - component: {fileID: 6756977323296426932}
@@ -103,7 +102,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3776611525685549244}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -161,7 +160,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _current: 2
   _max: 2
---- !u!114 &7816515352623405586
+--- !u!114 &4757602731999468943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3776611525685549244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7951dbfa68f4cacbca320bffc4a2a62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 4407335257519422682}
+--- !u!114 &1393410620641002401
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -173,22 +185,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b09d5ffa5057416db06f817e5b4bd29a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  observerTrigger: {fileID: 161558867706467139}
-  Amount: 1
---- !u!114 &-8034291129701153072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3776611525685549244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5099768570804781933e54d799582a58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 4407335257519422682}
---- !u!114 &-4250646390925259544
+  triggerObserver: {fileID: 161558867706467139}
+  damage: 1
+--- !u!114 &4669230964071163810
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,20 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65749e02c864bc9b3f5b255ee7156f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathOnDamage: {fileID: -8034291129701153072}
+  death: {fileID: 4757602731999468943}
   reward: 10
---- !u!114 &951293698874155785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3776611525685549244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a828892d615b4b45a637afa75e8f0a8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4859847714458848396
 MonoBehaviour:
   m_ObjectHideFlags: 0

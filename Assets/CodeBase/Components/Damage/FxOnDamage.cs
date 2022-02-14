@@ -13,7 +13,7 @@ namespace CodeBase.Components.Damage
       health.Changed += HealthChanged;
     }
 
-    private void HealthChanged() => 
+    private void HealthChanged(MonoBehaviour healthChanger) => 
       Instantiate(fxDamage, transform.position, Quaternion.identity, transform);
   }
 }

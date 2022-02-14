@@ -15,7 +15,7 @@ namespace CodeBase.UI.Elements
     private void OnDestroy() => 
       health.Changed -= HealthChanged;
 
-    private void HealthChanged() => 
+    private void HealthChanged(MonoBehaviour healthChanger) => 
       imageCurrent.fillAmount = health.Current / health.Max;
   }
 }

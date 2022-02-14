@@ -48,8 +48,8 @@ namespace CodeBase.Infrastructure.States
       _asteroidSpawner.StartSpawning();
     }
 
-    private DeathOnDamage PlayerDeathComponent() => 
-      _gameFactory.Player.GetComponent<DeathOnDamage>();
+    private Death PlayerDeathComponent() => 
+      _gameFactory.Player.GetComponent<Death>();
 
     private void ChangedScore()
     {
@@ -63,7 +63,7 @@ namespace CodeBase.Infrastructure.States
     private void StartNextDifficult() =>
       _gameStateMachine.Enter<LevelTitleState, AsteroidsState, int>(++_levelDifficult);
 
-    private void OnDeathPlayer(GameObject obj) => 
+    private void OnDeathPlayer(MonoBehaviour obj) => 
       _gameStateMachine.Enter<GameOverState>();
   }
 }

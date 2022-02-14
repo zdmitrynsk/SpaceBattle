@@ -5,21 +5,22 @@ using UnityEngine;
 namespace CodeBase.Components.Damage
 {
   [RequireComponent(typeof(TriggerObserver))]
-  public class KillOnCollision : MonoBehaviour
+  public class DamageEnemyOnCollision : MonoBehaviour
   {
     [SerializeField] private TriggerObserver triggerObserver;
+    [SerializeField] private float damage;
 
     private void Awake()
     {
-      triggerObserver.TriggerEnter += Enter;
+      triggerObserver.TriggerEnter += EnterTrigger;
     }
 
     private void OnDestroy()
     {
-      triggerObserver.TriggerEnter -= Enter;
+      triggerObserver.TriggerEnter -= EnterTrigger;
     }
 
-    private void Enter(Collider2D obj) =>
-      obj.GetComponent<DeathOnCollision>()?.Kill();
+    private void EnterTrigger(Collider2D obj) =>
+      obj.GetComponent<Health>()?.TakeDamage(this, damage);
   }
 }
