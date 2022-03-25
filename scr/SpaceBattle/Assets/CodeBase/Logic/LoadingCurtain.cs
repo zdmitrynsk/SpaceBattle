@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
@@ -22,17 +21,6 @@ namespace CodeBase.Logic
 
     public async Task Hide() =>
       await curtain.DOFade(0, 1).AsyncWaitForCompletion();
-      //StartCoroutine(DoFadeIn());
     
-    private IEnumerator DoFadeIn()
-    {
-      while (curtain.alpha > 0)
-      {
-        curtain.alpha -= 0.03f;
-        yield return new WaitForSeconds(0.03f);
-      }
-      
-      gameObject.SetActive(false);
-    }
   }
 }
