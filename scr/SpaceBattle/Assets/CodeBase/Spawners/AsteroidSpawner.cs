@@ -4,7 +4,7 @@ using CodeBase.Components;
 using CodeBase.Components.Observers;
 using CodeBase.Infrastructure;
 using CodeBase.Infrastructure.Factory;
-using CodeBase.Infrastructure.Services.RandomService;
+using CodeBase.Infrastructure.Services;
 using CodeBase.StaticData;
 using UnityEngine;
 using Zenject;

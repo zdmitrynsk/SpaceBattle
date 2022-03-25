@@ -1,5 +1,5 @@
 ﻿using CodeBase.Infrastructure.Factory;
-using CodeBase.Infrastructure.Services.InputService;
+using CodeBase.Infrastructure.Services;
 using UnityEngine;
 using Zenject;
 

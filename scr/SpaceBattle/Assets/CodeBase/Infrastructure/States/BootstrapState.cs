@@ -2,8 +2,6 @@ using System;
 using CodeBase.Infrastructure.AssetManagement;
 using CodeBase.Infrastructure.Factory;
 using CodeBase.Infrastructure.Services;
-using CodeBase.Infrastructure.Services.InputService;
-using CodeBase.Infrastructure.Services.RandomService;
 using CodeBase.Logic;
 using CodeBase.StaticData;
 using CodeBase.UI.Services.Factory;

@@ -1,9 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.PlayerLoop;
 
-namespace CodeBase.Infrastructure.Services.InputService
+namespace CodeBase.Infrastructure.Services
 {
   public class InputService : MonoBehaviour, IInputService
   {

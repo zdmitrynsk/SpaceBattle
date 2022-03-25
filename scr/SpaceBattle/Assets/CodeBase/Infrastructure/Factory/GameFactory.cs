@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using CodeBase.Infrastructure.AssetManagement;
-using CodeBase.Infrastructure.Services.RandomService;
+using CodeBase.Infrastructure.Services;
 using CodeBase.Spawners;
 using CodeBase.StaticData;
 using UnityEngine;
