@@ -24,7 +24,7 @@ namespace CodeBase.Components.Death
 
     private void OnDeath(MonoBehaviour killer)
     {
-      if (killer is DamageEnemy)
+      if (killer is DamageEnemyHealthAsDefault)
         _scores.Add(reward);
     }
   }

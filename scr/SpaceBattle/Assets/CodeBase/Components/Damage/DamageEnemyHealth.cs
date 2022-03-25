@@ -1,11 +1,9 @@
-﻿using CodeBase.Components.Death;
-using CodeBase.Components.Observers;
+﻿using CodeBase.Components.Observers;
 using UnityEngine;
 
 namespace CodeBase.Components.Damage
 {
-  [RequireComponent(typeof(TriggerObserver))]
-  public class DamageEnemyOnCollision : MonoBehaviour
+  public abstract class DamageEnemyHealth : MonoBehaviour
   {
     [SerializeField] private TriggerObserver triggerObserver;
     [SerializeField] private float damage;

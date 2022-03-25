@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 1877052104583328530}
   - component: {fileID: 1810840488045633180}
   - component: {fileID: 1694771707628321778}
-  - component: {fileID: 2004734833517570355}
+  - component: {fileID: 8151311968777441219}
   - component: {fileID: 1727722722913993036}
   - component: {fileID: 3692713229054886673}
   - component: {fileID: 7296719466572587130}
@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: {fileID: 3692713229054886673}
   decelerationValue: 0.5
---- !u!114 &2004734833517570355
+--- !u!114 &8151311968777441219
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,11 +309,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6414664948396918975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46fdc83c92e04adea0eca0cc09cf096a, type: 3}
+  m_Script: {fileID: 11500000, guid: b50a3d197d356c240be29e48acf9983c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   triggerObserver: {fileID: 2185117180370820953}
-  damage: 9999999
+  damage: 99999
 --- !u!114 &1727722722913993036
 MonoBehaviour:
   m_ObjectHideFlags: 0
