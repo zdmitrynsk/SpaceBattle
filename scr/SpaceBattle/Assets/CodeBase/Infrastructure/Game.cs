@@ -1,5 +1,6 @@
 using CodeBase.Infrastructure.Services;
 using CodeBase.Infrastructure.StateMachine;
+using CodeBase.Infrastructure.StateMachine.States;
 using CodeBase.Logic;
 using Zenject;
 
@@ -11,14 +12,28 @@ namespace CodeBase.Infrastructure
 
     public Game(ICoroutineRunner coroutineRunner, LoadingCurtain curtain)
     {
-      StateMachine = new GameStateMachine(new SceneLoader(coroutineRunner), curtain, ProjectContext().Container);
+      StateMachine = CreateStateMachine(coroutineRunner, curtain, ProjectContainer());
     }
 
-    private static ProjectContext ProjectContext()
+    private static DiContainer ProjectContainer()
     {
-      ProjectContext projectContext = Zenject.ProjectContext.Instance;
+      ProjectContext projectContext = ProjectContext.Instance;
       projectContext.ParentNewObjectsUnderContext = false;
-      return projectContext;
+      return projectContext.Container;
+    }
+
+    private static GameStateMachine CreateStateMachine(ICoroutineRunner coroutineRunner, LoadingCurtain curtain,
+      DiContainer container)
+    {
+      GameStateMachine gameStateMachine = new GameStateMachine();
+      gameStateMachine.Add(typeof(BootstrapState),
+        new BootstrapState(gameStateMachine, new SceneLoader(coroutineRunner), container, curtain));
+      gameStateMachine.Add(typeof(LoadGameSceneState), container.Instantiate<LoadGameSceneState>());
+      gameStateMachine.Add(typeof(StartGameState), container.Instantiate<StartGameState>());
+      gameStateMachine.Add(typeof(LevelTitleState), container.Instantiate<LevelTitleState>());
+      gameStateMachine.Add(typeof(AsteroidsState), container.Instantiate<AsteroidsState>());
+      gameStateMachine.Add(typeof(GameOverState), container.Instantiate<GameOverState>());
+      return gameStateMachine;
     }
   }
 }

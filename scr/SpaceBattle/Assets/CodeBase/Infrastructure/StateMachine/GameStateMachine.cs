@@ -12,18 +12,13 @@ namespace CodeBase.Infrastructure.StateMachine
     private readonly Dictionary<Type, IExitableState> _states;
     private IExitableState _activeState;
 
-    public GameStateMachine(SceneLoader sceneLoader, LoadingCurtain curtain, DiContainer container)
+    public GameStateMachine()
     {
-      _states = new Dictionary<Type, IExitableState>()
-      {
-        [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, container, curtain),
-        [typeof(LoadGameSceneState)] = container.Instantiate<LoadGameSceneState>(),
-        [typeof(StartGameState)] = container.Instantiate<StartGameState>(),
-        [typeof(LevelTitleState)] = container.Instantiate<LevelTitleState>(),
-        [typeof(AsteroidsState)] = container.Instantiate<AsteroidsState>(),
-        [typeof(GameOverState)] = container.Instantiate<GameOverState>()
-      };
+      _states = new Dictionary<Type, IExitableState>();
     }
+
+    public void Add(Type typeState, IExitableState state) => 
+      _states[typeState] = state;
 
     public void Enter<TState>() where TState : class, IState
     {
