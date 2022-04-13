@@ -5,7 +5,7 @@ using CodeBase.Infrastructure.Services;
 using CodeBase.Spawners;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.States
+namespace CodeBase.Infrastructure.StateMachine.States
 {
   public class AsteroidsState : IPayloadedState<int>
   {

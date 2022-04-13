@@ -8,7 +8,7 @@ using CodeBase.UI.Services.Factory;
 using UnityEngine;
 using Zenject;
 
-namespace CodeBase.Infrastructure.States
+namespace CodeBase.Infrastructure.StateMachine.States
 {
   public class BootstrapState : IState
   {

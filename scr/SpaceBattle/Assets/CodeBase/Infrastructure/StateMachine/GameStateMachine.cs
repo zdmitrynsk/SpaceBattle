@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using CodeBase.Infrastructure.Services;
+using CodeBase.Infrastructure.StateMachine.States;
 using CodeBase.Logic;
 using Zenject;
 
-namespace CodeBase.Infrastructure.States
+namespace CodeBase.Infrastructure.StateMachine
 {
   public class GameStateMachine : IGameStateMachine
   {

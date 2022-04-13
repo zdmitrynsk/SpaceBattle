@@ -3,7 +3,7 @@ using CodeBase.Infrastructure.Services;
 using CodeBase.Logic;
 using CodeBase.UI.Services.Factory;
 
-namespace CodeBase.Infrastructure.States
+namespace CodeBase.Infrastructure.StateMachine.States
 {
   public class LoadGameSceneState : IState
   {

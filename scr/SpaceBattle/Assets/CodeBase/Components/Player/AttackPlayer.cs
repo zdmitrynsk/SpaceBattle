@@ -5,15 +5,15 @@ using Zenject;
 
 namespace CodeBase.Components.Player
 {
-  public class PlayerAttack : MonoBehaviour
+  public class AttackPlayer : MonoBehaviour
   {
     [SerializeField] private float speedBullet = 15;
     [SerializeField] private float cooldownSec;
     
     private IGameFactory _gameFactory;
     private IInputService _input;
-
-    private float _lastShot;
+    private float _lastShotTime;
+    private int _bulletsCount;
 
     [Inject]
     public void Construct(IGameFactory gameFactory, IInputService input)
@@ -32,11 +32,11 @@ namespace CodeBase.Components.Player
       _input.IsAttackButtonDown;
 
     private bool IsReadyCooldown() => 
-      Time.realtimeSinceStartup - _lastShot > cooldownSec;
+      Time.realtimeSinceStartup - _lastShotTime > cooldownSec;
 
     private async void Fire()
     {
-      _lastShot = Time.realtimeSinceStartup;
+      _lastShotTime = Time.realtimeSinceStartup;
       var bullet = await _gameFactory.CreateBullet(ShotPosition(), transform.rotation);
       bullet.GetComponent<Move.Move>().MovementSpeedVector = transform.up * speedBullet;
     }

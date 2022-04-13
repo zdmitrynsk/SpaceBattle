@@ -5,7 +5,7 @@ using Zenject;
 namespace CodeBase.Components.Player
 {
   [RequireComponent(typeof(Move.Move))]
-  public class PlayerAccelerateSpeed : MonoBehaviour
+  public class AccelerateSpeedPlayer : MonoBehaviour
   {
     [SerializeField] private Move.Move move;
     [SerializeField] private float accelerationValue = 9f;

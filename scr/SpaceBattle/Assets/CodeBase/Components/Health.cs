@@ -1,4 +1,5 @@
 ﻿using System;
+using CodeBase.Components.Damage;
 using UnityEngine;
 
 namespace CodeBase.Components
@@ -7,7 +8,7 @@ namespace CodeBase.Components
   {
     [SerializeField] private float _current;
     [SerializeField] private float _max;
-    public event Action<Damage.DamageEnemyHealth> Changed;
+    public event Action<DamageEnemyHealthBase> Changed;
 
     public float Current
     {
@@ -21,7 +22,7 @@ namespace CodeBase.Components
       set => _max = value;
     }
 
-    public void TakeDamage(Damage.DamageEnemyHealth healthChanger, float damage)
+    public void TakeDamage(DamageEnemyHealthBase healthChanger, float damage)
     {
       Current -= damage;
       Changed?.Invoke(healthChanger);

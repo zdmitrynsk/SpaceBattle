@@ -4,7 +4,7 @@ using UnityEngine;
 namespace CodeBase.Components.Damage
 {
   [RequireComponent(typeof(TriggerObserver))]
-  public class DamageEnemyHealthAsCollision : DamageEnemyHealth
+  public class DamageEnemyHealthAsCollision : DamageEnemyHealthBase
   {
 
   }

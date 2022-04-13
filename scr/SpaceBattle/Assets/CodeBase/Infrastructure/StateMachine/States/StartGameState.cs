@@ -3,7 +3,7 @@ using CodeBase.Infrastructure.Services;
 using CodeBase.Logic;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.States
+namespace CodeBase.Infrastructure.StateMachine.States
 {
   internal class StartGameState : IState
   {

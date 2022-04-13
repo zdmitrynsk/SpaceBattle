@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace CodeBase.Components.ScreenAreaOut
+namespace CodeBase.Components.ScreenOutArea
 {
   public class TeleportationOnScreenAreaOut : MonoBehaviour
   {

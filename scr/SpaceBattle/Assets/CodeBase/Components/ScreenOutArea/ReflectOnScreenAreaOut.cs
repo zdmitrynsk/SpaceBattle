@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 
-namespace CodeBase.Components.ScreenAreaOut
+namespace CodeBase.Components.ScreenOutArea
 {
-  public class DestroyOnScreenAreaOut : MonoBehaviour
+  [RequireComponent(typeof(Move.Move))]
+  public class ReflectOnScreenAreaOut : MonoBehaviour
   {
+    [SerializeField] private Move.Move move;
     private Rect _worldArea;
+    private bool _isOuted;
 
     private void Awake()
     {
@@ -14,7 +17,17 @@ namespace CodeBase.Components.ScreenAreaOut
     private void Update()
     {
       if (IsOutArea())
-        Destroy(gameObject);
+      {
+        if (_isOuted == false)
+        {
+          move.MovementSpeedVector *= -1;
+          _isOuted = true;
+        }
+      }
+      else
+      {
+        _isOuted = false;
+      }
     }
 
     private static Rect WorldAreaOfScreen() =>
@@ -29,7 +42,7 @@ namespace CodeBase.Components.ScreenAreaOut
       || IsOutAxis(transform.position.y, _worldArea.yMin, _worldArea.yMax);
 
 
-    private bool IsOutAxis(float position, float Min, float Max) => 
+    private bool IsOutAxis(float position, float Min, float Max) =>
       position < Min || position > Max;
   }
 }

@@ -26,7 +26,7 @@ namespace CodeBase.Components.Move
 
     private void FixedUpdate()
     {
-      MoveByFrameDistance();
+      MoveByFixedFrameDistance();
     }
     
     public void SpeedUp(Vector2 value) => 
@@ -34,16 +34,16 @@ namespace CodeBase.Components.Move
 
     public void SpeedDown(Vector2 value) =>
       MovementSpeedVector = new Vector2(
-        DownToZero(_movementSpeedVector.x, value.x),
-        DownToZero(_movementSpeedVector.y, value.y));
+        СhangeToZeroByValue(_movementSpeedVector.x, value.x),
+        СhangeToZeroByValue(_movementSpeedVector.y, value.y));
 
-    private void MoveByFrameDistance()
+    private void MoveByFixedFrameDistance()
     {
       Vector3 distance = MovementSpeedVector * Time.fixedDeltaTime;
       rigidbody2D.MovePosition(transform.position += distance);
     }
 
-    private static float DownToZero(float baseValue, float downValue)
+    private static float СhangeToZeroByValue(float baseValue, float downValue)
     {
       if (baseValue == 0) 
         return 0;

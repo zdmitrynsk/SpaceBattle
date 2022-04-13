@@ -5,7 +5,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.States
+namespace CodeBase.Infrastructure.StateMachine.States
 {
   public class LevelTitleState :  IPayloadedState<IPayloadedState<int>, int>
   {

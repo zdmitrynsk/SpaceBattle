@@ -1,7 +1,7 @@
 ﻿using CodeBase.UI.Services.Factory;
 using UnityEngine;
 
-namespace CodeBase.Infrastructure.States
+namespace CodeBase.Infrastructure.StateMachine.States
 {
   public class GameOverState : IState
   {

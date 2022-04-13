@@ -4,10 +4,10 @@ using Zenject;
 
 namespace CodeBase.Components.Player
 {
-  public class PlayerRotate : MonoBehaviour
+  public class RotatePlayer : MonoBehaviour
   {
     [SerializeField] private float rotateSpeed = 150;
-    [SerializeField] private Rigidbody2D rigidbody2D;
+    [SerializeField] private Rigidbody2D _rigidbody2D;
     private IInputService _inputService;
 
     [Inject]
@@ -26,7 +26,7 @@ namespace CodeBase.Components.Player
       InputAxisX() != 0;
 
     private void RotateZByFrameAngle() => 
-      rigidbody2D.MoveRotation(RotatingAngel());
+      _rigidbody2D.MoveRotation(RotatingAngel());
 
     private float RotatingAngel() => 
       transform.rotation.eulerAngles.z - Mathf.Sign(InputAxisX()) * rotateSpeed * Time.fixedDeltaTime;

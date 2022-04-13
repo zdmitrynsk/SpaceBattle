@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace CodeBase.Components.Damage
 {
-  public abstract class DamageEnemyHealth : MonoBehaviour
+  public abstract class DamageEnemyHealthBase : MonoBehaviour
   {
     [SerializeField] private TriggerObserver triggerObserver;
     [SerializeField] private float damage;
