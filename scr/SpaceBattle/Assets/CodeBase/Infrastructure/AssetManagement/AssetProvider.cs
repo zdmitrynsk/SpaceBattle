@@ -18,7 +18,7 @@ public class AssetProvider : IAssets
       _container = container;
     }
 
-    public void Initialize() =>
+    public void Initialize() => 
       Addressables.InitializeAsync();
 
     public async Task<T> Load<T>(AssetReference assetReference) where T : class
